@@ -1,0 +1,51 @@
+{
+  "name": "@qest/express-utils",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "test": "cross-env TS_NODE_PROJECT=\"tsconfig.test.json\" mocha --opts test/mocha.opts",
+    "test:cover": "nyc --check-coverage mocha --opts test/mocha.opts",
+    "prettier:run": "prettier --write \"src/**/*.ts\"",
+    "prettier:check": "prettier -l \"src/**/*.ts\"",
+    "tslint:run": "tslint --fix -c tslint.json -p .",
+    "tslint": "tslint -c tslint.json -p .",
+    "build": "rimraf dist && tsc"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [],
+  "author": "QEST",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qest-cz/express-utils"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@qest/logger-utils": "^0.0.4",
+    "@sentry/node": "^5.3.0",
+    "@types/chai": "^4.1.2",
+    "@types/express": "^4.11.1",
+    "@types/express-rate-limit": "3.3.0",
+    "@types/mocha": "^2.2.48",
+    "body-parser": "^1.18.2",
+    "chai": "^4.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.2",
+    "express-rate-limit": "3.3.0",
+    "http-codes": "^1.0.0",
+    "lodash": "^4.17.15",
+    "sinon": "^7.5.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.4",
+    "cross-env": "^5.2.0",
+    "prettier": "^1.13.5",
+    "rimraf": "^2.6.3",
+    "ts-node": "^5.0.1",
+    "tslint": "^5.9.1",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.4.5"
+  }
+}
