@@ -3,8 +3,6 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "test": "cross-env TS_NODE_PROJECT=\"tsconfig.test.json\" mocha --opts test/mocha.opts",
-    "test:cover": "nyc --check-coverage mocha --opts test/mocha.opts",
     "prettier:run": "prettier --write \"src/**/*.ts\"",
     "prettier:check": "prettier -l \"src/**/*.ts\"",
     "tslint:run": "tslint --fix -c tslint.json -p .",
@@ -27,7 +25,6 @@
     "@types/chai": "^4.2.4",
     "@types/express": "^4.17.1",
     "@types/express-rate-limit": "3.3.3",
-    "@types/mocha": "^5.2.7",
     "body-parser": "^1.19.0",
     "chai": "^4.2.0",
     "cors": "^2.8.5",
