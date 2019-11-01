@@ -1,4 +1,4 @@
-import { ServiceUnavailableError } from '../../../errors/http-errors';
+import { ServiceUnavailableError } from '@qest/error-utils';
 
 export const serviceUnavailable = (unavailable = false) => (req, res, next) => {
     try {

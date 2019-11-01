@@ -1,6 +1,6 @@
+import * as httpErrors from '@qest/error-utils';
 import { NextFunction, Request, Response } from 'express';
 import { NOT_FOUND, OK } from 'http-codes';
-import * as httpErrors from '../../../errors';
 
 export const notFoundHandler = (req: Request, res: Response, next: NextFunction) => {
     if (res.statusCode === OK || res.statusCode === 404) {

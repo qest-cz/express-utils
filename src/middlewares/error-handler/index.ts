@@ -1,8 +1,8 @@
+import * as httpErrors from '@qest/error-utils';
 import { IHandlerError, ILogger } from '@qest/logger-utils';
 import { NextFunction, Response } from 'express';
 import * as httpCodes from 'http-codes';
 import * as _ from 'lodash';
-import * as httpErrors from '../../../errors';
 import { IBasicAppRequest, IBasicUser } from '../../interfaces';
 
 const NETWORK_CONNECT_TIMEOUT = 599;
