@@ -19,7 +19,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@qest/error-utils": "^0.0.2",
+    "@qest/error-utils": "^0.0.3",
     "@qest/logger-utils": "^0.0.4",
     "@sentry/node": "^5.7.1",
     "@types/chai": "^4.2.4",

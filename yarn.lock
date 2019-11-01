@@ -37,10 +37,10 @@
     reflect-metadata "^0.1.12"
     tslib "^1.8.1"
 
-"@qest/error-utils@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@qest/error-utils/-/error-utils-0.0.2.tgz#6ed2b324f266b945a59b5ae279bf4ede636493c7"
-  integrity sha512-cU+ieb3L+N5u2ub60qwXT9Q9LNkknWaMNyAGC2RE/d774iPgQd1uIiaBXXjSg0SdfxK7wx3zyPFiQ3szmoL9Dw==
+"@qest/error-utils@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@qest/error-utils/-/error-utils-0.0.3.tgz#fc5a661446b0b38146bdc31fa67c9a0c328bad8b"
+  integrity sha512-Fn0gmPhdqtok5dKdph28wBalHOTDT7EPe3WV1vSbiQxrxHpiGtNEiaDaipEuxBPeDkcE/M/5z5gxMoWvAc00Kw==
   dependencies:
     http-codes "^1.0.0"
     util "^0.12.1"
@@ -207,11 +207,6 @@
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-2.0.1.tgz#dc488842312a7f075149312905b5e3c0b054c79d"
   integrity sha512-FwI9gX75FgVBJ7ywgnq/P7tw+/o1GUbtP0KzbtusLigAOgIgNISRK0ZPl4qertvXSIE8YbsVJueQ90cDt9YYyw==
-
-"@types/mocha@^5.2.7":
-  version "5.2.7"
-  resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-5.2.7.tgz#315d570ccb56c53452ff8638738df60726d5b6ea"
-  integrity sha512-NYrtPht0wGzhwe9+/idPaBB+TqkY9AhTvOLMkThm0IoEfLaiVQZwBwyJ5puCkO3AUCWrmcoePjp2mbFocKy4SQ==
 
 "@types/node@*":
   version "12.11.7"
