@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../../src/middlewares/base-front-route/robots/index.ts"],"names":[],"mappings":";;AAEa,QAAA,SAAS,GAAG,CAAC,GAAoB,EAAE,GAAqB,EAAE,IAA0B,EAAE,EAAE;IACjG,IAAI;QACA,GAAG,CAAC,IAAI,CAAC,YAAY,CAAC,CAAC;QACvB,GAAG,CAAC,IAAI,CAAC,4BAA4B,CAAC,CAAC;KAC1C;IAAC,OAAO,CAAC,EAAE;QACR,IAAI,CAAC,CAAC,CAAC,CAAC;KACX;AACL,CAAC,CAAC"}
