@@ -43,7 +43,7 @@ export const sendErrorResponse = (error: IHttpError, res: Response, next: NextFu
     payload.type = error.type;
     payload.message = error.message;
 
-    res.status(error.code).json(payload);
+    res.status(error.code || 500).json(payload);
     next();
 };
 
