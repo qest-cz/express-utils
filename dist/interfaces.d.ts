@@ -1,6 +1,5 @@
 import bodyParser from 'body-parser';
 import { ErrorRequestHandler, Handler, Request, Router } from 'express';
-
 export interface IExpressApp {
     logger: ILogger;
     router: Router;
@@ -15,25 +14,20 @@ export interface IExpressApp {
     bodyParser?: Handler;
     urlParser?: Handler;
 }
-
 export interface IExpressConfig {
     useSentry?: boolean;
     useDefaultMiddlewares?: boolean;
     bodyParserOptions?: bodyParser.OptionsUrlencoded;
     urlParserOptions?: bodyParser.OptionsUrlencoded;
 }
-
 export interface IBasicUser {
     id: any;
     role?: string;
 }
-
 export interface IBasicAppRequest<T extends IBasicUser> extends Request {
     user: T;
 }
-
-type LoggerMsg = string | object | Error;
-
+declare type LoggerMsg = string | object | Error;
 export interface ILogger {
     fatal: (msg: LoggerMsg, ...args: any[]) => void;
     error: (msg: LoggerMsg, ...args: any[]) => void;
@@ -42,3 +36,4 @@ export interface ILogger {
     debug: (msg: LoggerMsg, ...args: any[]) => void;
     trace: (msg: LoggerMsg, ...args: any[]) => void;
 }
+export {};

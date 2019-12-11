@@ -1,5 +1,5 @@
 import { NextFunction, Request, RequestHandler, Response } from 'express';
-import * as RateLimit from 'express-rate-limit';
+import RateLimit from 'express-rate-limit';
 import { IRateLimiterConfig } from './interfaces';
 
 export const rateLimiter = (settings?: IRateLimiterConfig): RequestHandler => {

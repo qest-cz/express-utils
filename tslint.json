@@ -1,10 +1,12 @@
 {
   "extends": [
-    "tslint-config-airbnb",
+    "tslint-sonarts",
+    "tslint-consistent-codestyle",
+    "tslint-config-security",
+    "tslint-no-circular-imports",
     "tslint-config-prettier"
   ],
   "rules": {
-    "file-name-casing": [true, "kebab-case"],
     "only-arrow-functions": true,
     "no-reference": true,
     "typedef": [
@@ -40,6 +42,15 @@
         "singleline": "ignore"
       }
     ],
+    "curly": [
+      true,
+      "ignore-same-line"
+    ],
+    "no-console": [
+      true,
+      "log",
+      "error"
+    ],
     "no-duplicate-variable": true,
     "no-empty": true,
     "no-eval": true,
@@ -49,21 +60,16 @@
     "no-var-keyword": true,
     "switch-default": true,
     "triple-equals": true,
+    "file-name-casing": [
+      true,
+      "kebab-case"
+    ],
     "use-isnan": true,
     "prefer-const": true,
-    "class-name": true,
     "no-angle-bracket-type-assertion": false,
     "no-consecutive-blank-lines": true,
-    "no-console": [
-      true,
-      "log",
-      "error"
-    ],
-    "quotemark": [
-      true,
-      "single",
-      "jsx-double"
-    ],
+    "promise-function-async": true,
+    "await-promise": false,
     "whitespace": [
       true,
       "check-decl",
@@ -71,9 +77,26 @@
       "check-module",
       "check-type"
     ],
-    "interface-name": [
+    "import-blacklist": [
       true,
-      "always-prefix"
+      {
+        "lodash": [
+          "each",
+          "map",
+          "every",
+          "some",
+          "reduce",
+          "reduceRight",
+          "filter",
+          "find",
+          "findIndex",
+          "indexOf",
+          "lastIndexOf",
+          "isNan",
+          "omit",
+          "pick"
+        ]
+      }
     ],
     "member-ordering": [
       true,
@@ -98,8 +121,7 @@
         "named-imports-order": "case-insensitive"
       }
     ],
-    "semicolon": true,
-    "curly": true,
+    "semicolon": false,
     "indent": [
       true,
       "spaces",
@@ -126,13 +148,113 @@
     "no-duplicate-switch-case": true,
     "no-switch-case-fall-through": true,
     "arrow-return-shorthand": true,
-    "no-increment-decrement": false,
-    "triple-equals": true,
-    "no-boolean-literal-compare": false
+    "no-duplicate-super": true,
+    "no-useless-catch": true,
+    "prefer-immediate-return": true,
+    "no-hardcoded-credentials": false,
+    "bool-param-default": true,
+    "cognitive-complexity": [
+      true,
+      10
+    ],
+    "consecutive-overloads": true,
+    "no-empty-nested-blocks": true,
+    "no-invariant-return": true,
+    "no-nested-switch": true,
+    "prefer-optional": true,
+    "use-primitive-type": true,
+    "no-useless-intersection": true,
+    "no-misleading-array-reverse": true,
+    "no-identical-conditions": true,
+    "no-array-delete": true,
+    "no-dead-store": true,
+    "no-gratuitous-expressions": true,
+    "no-multiline-string-literals": true,
+    "no-redundant-boolean": true,
+    "no-nested-template-literals": true,
+    "no-variable-usage-before-declaration": true,
+    "no-unnecessary-type-annotation": true,
+    "naming-convention": [
+      true,
+      {
+        "type": "type",
+        "format": "PascalCase"
+      },
+      {
+        "type": "functionVariable",
+        "filter": "Schema$",
+        "format": "PascalCase"
+      },
+      {
+        "type": "variable",
+        "filter": "Model$",
+        "format": "PascalCase"
+      },
+      {
+        "type": "variable",
+        "filter": "Schema$",
+        "format": "PascalCase"
+      },
+      {
+        "type": "variable",
+        "filter": "_id",
+        "leadingUnderscore": "allow"
+      },
+      {
+        "type": "enumMember",
+        "format": "UPPER_CASE"
+      },
+      {
+        "type": "genericTypeParameter",
+        "prefix": "T"
+      },
+      {
+        "type": "type",
+        "format": "PascalCase"
+      },
+      {
+        "type": "member",
+        "modifiers": "protected",
+        "leadingUnderscore": "require"
+      }
+    ],
+    "parameters-max-number": [
+      true,
+      5
+    ],
+    "mccabe-complexity": [
+      true,
+      20
+    ],
+    "no-duplicate-string": [
+      true,
+      20
+    ],
+    "no-identical-functions": false,
+    "no-implicit-dependencies": [
+      true,
+      "dev",
+      [
+        "@services",
+        "@config",
+        "@api",
+        "@utils",
+        "@models",
+        "@validators",
+        "@test-setup",
+        "@repositories",
+        "@permission-repositories",
+        "@middlewares"
+      ]
+    ],
+    "quotemark": [
+      true,
+      "single",
+      "jsx-double"
+    ]
   },
   "linterOptions": {
     "exclude": [
-      "package.json",
       "node_modules/**"
     ]
   }
