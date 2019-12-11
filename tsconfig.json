@@ -1,17 +1,23 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "baseUrl": "./src",
     "module": "commonjs",
-    "outDir": "dist",
-    "sourceMap": true,
-    "removeComments": true,
-    "declaration": true,
+    "esModuleInterop": true,
     "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "outDir": "./dist",
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "downlevelIteration": true,
+    "target": "es6",
+    "declaration": true,
     "typeRoots": [
       "node_modules/@types"
-    ],
-    "noUnusedLocals": true,
-    "resolveJsonModule": true
+    ]
   },
   "include": [
     "./src/**/*.ts"

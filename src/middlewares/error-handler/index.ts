@@ -1,50 +1,44 @@
-import * as httpErrors from '@qest/error-utils';
-import { IHandlerError, ILogger } from '@qest/logger-utils';
+import { IHttpError, NotFoundError, UnprocessableEntityError } from '@qest/error-utils';
 import { NextFunction, Response } from 'express';
-import * as httpCodes from 'http-codes';
-import * as _ from 'lodash';
-import { IBasicAppRequest, IBasicUser } from '../../interfaces';
+import { INTERNAL_SERVER_ERROR } from 'http-codes';
+import { IBasicAppRequest, IBasicUser, ILogger } from '../../interfaces';
 
 const NETWORK_CONNECT_TIMEOUT = 599;
 
-export const errorHandler = (logger: ILogger) => {
-    return (error: any, req: IBasicAppRequest<IBasicUser>, res: Response, next: NextFunction) => {
-        try {
-            let err = error;
-            if (err.isJoi) {
-                const payload = { details: _.get(err, 'details', []) };
-                err = new httpErrors.UnprocessableEntityError({ err, payload, message: 'Validation error' });
-            }
+export const errorHandler = (logger: ILogger) => (error: any, req: IBasicAppRequest<IBasicUser>, res: Response, next: NextFunction) => {
+    let err = error;
 
-            err = createHandlerError(err, req);
-
-            if (err instanceof httpErrors.HttpError === false) {
-                logger.fatal(err);
-                err = new httpErrors.InternalServerError({ err });
-            } else {
-                if (httpCodes.INTERNAL_SERVER_ERROR <= err.code && err.code <= NETWORK_CONNECT_TIMEOUT) {
-                    logger.error(err);
-                } else if (err instanceof httpErrors.NotFoundError) {
-                    logger.debug(err);
-                } else {
-                    logger.info(err);
-                }
-            }
-
-            sendErrorResponse(err, res, next);
-        } catch (newError) {
-            logger.fatal(newError);
-            res.send({
-                code: httpCodes.INTERNAL_SERVER_ERROR,
-                message: newError.toString(),
-                type: 'error_processing_failure',
-            });
-            next();
+    try {
+        if (err.isJoi) {
+            const payload = { details: err?.details ?? [] };
+            err = new UnprocessableEntityError({ err, payload, message: 'Validation error' });
         }
-    };
+
+        err = createHandlerError(err, req);
+
+        if (INTERNAL_SERVER_ERROR <= err.code && err.code <= NETWORK_CONNECT_TIMEOUT) {
+            logger.error(err);
+        } else if (err instanceof NotFoundError) {
+            logger.debug(err);
+        } else {
+            logger.info(err);
+        }
+
+        sendErrorResponse(err, res, next);
+    } catch (internalError) {
+        logger.fatal(internalError);
+
+        res.status(INTERNAL_SERVER_ERROR).json({
+            code: INTERNAL_SERVER_ERROR,
+            message: internalError.toString(),
+            type: 'error_processing_failure',
+        });
+
+        next();
+    }
 };
 
-export const sendErrorResponse = (error: httpErrors.IHttpError, res: Response, next: NextFunction) => {
+export const sendErrorResponse = (error: IHttpError, res: Response, next: NextFunction) => {
     const payload = error.payload;
     payload.type = error.type;
     payload.message = error.message;
@@ -53,19 +47,11 @@ export const sendErrorResponse = (error: httpErrors.IHttpError, res: Response, n
     next();
 };
 
-const createHandlerError = (err: httpErrors.BaseError<any>, req: IBasicAppRequest<IBasicUser>) => {
-    const e: IHandlerError = <any>err;
+const createHandlerError = (err: any, req: IBasicAppRequest<IBasicUser>) => {
+    const e = err;
     const { headers, query, user, body, path, cookies, ip, url, secure } = req;
+
     e.user = user;
-    e.req = {
-        headers,
-        query,
-        body,
-        cookies,
-        ip,
-        url,
-        path,
-        secure,
-    };
+    e.req = { headers, query, body, cookies, ip, url, path, secure };
     return e;
 };

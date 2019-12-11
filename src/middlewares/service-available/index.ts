@@ -1,6 +1,7 @@
 import { ServiceUnavailableError } from '@qest/error-utils';
+import { Handler } from 'express';
 
-export const serviceUnavailable = (unavailable = false) => (req, res, next) => {
+export const serviceUnavailable = (unavailable = false): Handler => (req, res, next) => {
     try {
         if (unavailable) {
             const unavailableError = new ServiceUnavailableError();

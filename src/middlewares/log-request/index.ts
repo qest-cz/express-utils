@@ -1,19 +1,18 @@
-import { ILogger } from '@qest/logger-utils';
-import { NextFunction, Request, Response } from 'express';
-import * as onFinished from 'on-finished';
+import { Handler } from 'express';
+import { ILogger } from '../../interfaces';
 
-export const logRequest = (logger: ILogger) => {
-    return (req: Request, res: Response, next: NextFunction) => {
-        const time = new Date();
+export const logRequest = (logger: ILogger): Handler => (req, res, next) => {
+    const time = new Date();
 
-        onFinished(req, () => {
-            logger.debug({
-                request: `${req.method} ${req.originalUrl}`,
-                status: res.statusCode,
-                reqTime: (new Date().getTime() - time.getTime()) / 1000,
-            });
+    const onFinished = () =>
+        logger.debug({
+            request: `${req.method} ${req.originalUrl}`,
+            status: res.statusCode,
+            reqTime: (new Date().getTime() - time.getTime()) / 1000,
         });
 
-        return next();
-    };
+    req.on('close', onFinished);
+    req.on('end', onFinished);
+
+    return next();
 };
