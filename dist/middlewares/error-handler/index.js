@@ -34,7 +34,7 @@ exports.errorHandler = (logger) => (error, req, res, next) => {
     }
 };
 exports.sendErrorResponse = (error, res, next) => {
-    const payload = error.payload;
+    const payload = error.payload || {};
     payload.type = error.type;
     payload.message = error.message;
     res.status(error.code).json(payload);

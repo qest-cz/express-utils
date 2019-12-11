@@ -39,7 +39,7 @@ export const errorHandler = (logger: ILogger) => (error: any, req: IBasicAppRequ
 };
 
 export const sendErrorResponse = (error: IHttpError, res: Response, next: NextFunction) => {
-    const payload = error.payload;
+    const payload = error.payload || {};
     payload.type = error.type;
     payload.message = error.message;
 
