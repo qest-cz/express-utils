@@ -13,7 +13,7 @@ export const errorHandler = (logger: ILogger) => {
             let err = error;
             if (err.isJoi) {
                 const payload = { details: _.get(err, 'details', []) };
-                err = new httpErrors.UnprocessableEntityError({ err, payload, message: 'Validation error' });
+                err = new httpErrors.UnprocessableEntityError({ err, payload, message: err.message });
             }
 
             err = createHandlerError(err, req);
