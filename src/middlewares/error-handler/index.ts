@@ -18,7 +18,7 @@ export const errorHandler = (logger: ILogger) => {
 
             err = createHandlerError(err, req);
 
-            if (err instanceof httpErrors.HttpError === false) {
+            if (!err.isHttp) {
                 logger.fatal(err);
                 err = new httpErrors.InternalServerError({ err });
             } else {
