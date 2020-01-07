@@ -23,17 +23,18 @@
   "license": "MIT",
   "dependencies": {
     "@qest/error-utils": "^1.0.1",
-    "@qest/logger-utils": "^0.0.4",
     "@sentry/node": "^5.7.1",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "express-rate-limit": "5.0.0",
     "http-codes": "^1.0.0",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "on-finished": "^2.3.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.1",
     "@types/express-rate-limit": "3.3.3",
+    "@types/http-codes": "^1.0.1",
     "prettier": "^1.18.2",
     "rimraf": "^3.0.0",
     "ts-node": "^8.4.1",

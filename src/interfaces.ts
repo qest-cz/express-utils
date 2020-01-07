@@ -1,18 +1,15 @@
-import { ILogger } from '@qest/logger-utils';
 import * as bodyParser from 'body-parser';
-import { ErrorRequestHandler, Handler, IRouter, Request } from 'express';
-
-export interface IExpressAppMiddlewareConfig {
-    rateLimiter?: Handler;
-    logRequest?: Handler;
-    notFoundHandler?: Handler;
-    errorHandler?: ErrorRequestHandler;
-}
+import { ErrorRequestHandler, Handler, Request, Router } from 'express';
 
 export interface IExpressApp {
     logger: ILogger;
-    router: IRouter<Handler>;
-    middlewares?: IExpressAppMiddlewareConfig;
+    router: Router;
+    middlewares?: {
+        rateLimiter?: Handler;
+        logRequest?: Handler;
+        notFoundHandler?: Handler;
+        errorHandler?: ErrorRequestHandler;
+    };
     preMiddleware?: Handler[];
     postMiddleware?: Handler[];
     bodyParser?: Handler;
@@ -31,6 +28,17 @@ export interface IBasicUser {
     role?: string;
 }
 
-export interface IBasicAppRequest<U extends IBasicUser> extends Request {
-    user: U;
+export interface IBasicAppRequest<T extends IBasicUser> extends Request {
+    user: T;
+}
+
+type LoggerMsg = string | object | Error;
+
+export interface ILogger {
+    fatal: (msg: LoggerMsg, ...args: any[]) => void;
+    error: (msg: LoggerMsg, ...args: any[]) => void;
+    warn: (msg: LoggerMsg, ...args: any[]) => void;
+    info: (msg: LoggerMsg, ...args: any[]) => void;
+    debug: (msg: LoggerMsg, ...args: any[]) => void;
+    trace: (msg: LoggerMsg, ...args: any[]) => void;
 }
