@@ -8,9 +8,9 @@ export const serviceUnavailable = (unavailable = false): Handler => (req, res, n
             res.status(unavailableError.code).json({
                 message: unavailableError.message,
             });
+        } else {
+            next();
         }
-
-        next();
     } catch (e) {
         next(e);
     }

@@ -2,8 +2,8 @@ import * as bodyParser from 'body-parser';
 import { ErrorRequestHandler, Handler, Request, Router } from 'express';
 
 export interface IExpressApp {
-    logger: ILogger;
     router: Router;
+    logger?: ILogger;
     middlewares?: {
         rateLimiter?: Handler;
         logRequest?: Handler;

@@ -26,9 +26,7 @@ export const server = (options: IExpressApp, config?: IExpressConfig) => {
     };
 
     const { logger, router, middlewares, preMiddleware, postMiddleware, bodyParser, urlParser } = options;
-
     const activeMiddlewares = defaultConfig.useDefaultMiddlewares ? { ...defaultAppMiddlewares(logger), ...middlewares } : middlewares;
-
     return express()
         .use(defaultConfig.useSentry ? Sentry.Handlers.requestHandler : passThroughMiddleware)
         .use(urlParser || defaultUrlParser(defaultConfig.urlParserOptions))
