@@ -1,3 +1,3 @@
 export * from './server';
 export * from './middlewares';
-export * from './interfaces';
+export { IExpressAppMiddlewareConfig, IExpressApp, IExpressConfig, IBasicUser, IBasicAppRequest } from './interfaces';
