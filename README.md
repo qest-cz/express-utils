@@ -31,29 +31,20 @@ const expressServer: (options: IExpressApp, config?: IExpressConfig) => core.Exp
     - `logRequest?: Handler` - If you can log each request to some logging service. You can use predefined `logRequest` whitch use ILogger implementation. 
     - `notFoundHandler?: Handler` - Handler for normalization of not recognized routes from router. You can use predefined `notFoundHandler`. 
     - `errorHandler?: ErrorRequestHandler` - Our custom error handler or predefined `errorHandler`.
-- `preMiddleware?: Handler` - Custom middlewares which is before router. 
-- `postMiddleware?: Handler` - Custom middlewares which is after router.
-- `bodyParser?: Handler` - custom body parsing middleware, if it isn't set, 
-- `urlParser?: Handler`
-```typescript
-interface IExpressApp {
-    logger: ILogger;
-    router: Router;
-    middlewares?: {
-        rateLimiter?: Handler;
-        logRequest?: Handler;
-        notFoundHandler?: Handler;
-        errorHandler?: ErrorRequestHandler;
-    };
-    preMiddleware?: Handler[];
-    postMiddleware?: Handler[];
-    bodyParser?: Handler;
-    urlParser?: Handler;
-}
-```
-#### Config parameters
- 
+- `preMiddleware?: Handler[]` - Custom middlewares which is before router. 
+- `postMiddleware?: Handler[]` - Custom middlewares which is after router.
+- `bodyParser?: Handler` - Custom body parsing middleware, if it isn't set, default parser is from package [body-parser](https://www.npmjs.com/package/body-parser).
+- `urlParser?: Handler` - Custom url parsing middleware, if it isn't set, default parser is from package [body-parser](https://www.npmjs.com/package/body-parser).
 
+#### Config parameters
+- `useSentry?: boolean` - If it's true, `Sentry.Handlers.errorHandler` was used. Default value is false
+- `useDefaultMiddlewares?: boolean` - If it's true, preconfigured middlewares from this package was used. Every default middleware you can override via options middlewares Default middlewares are with this setting:
+    ```typescript
+    notFoundHandler,
+    errorHandler: errorHandler(logger),
+    logRequest: logRequest(logger),
+    rateLimiter: rateLimiter({ windowMs: 5 * 1000, max: 500, enabled: true }),
+    ```
 ## Usage
 First you must have router for our application with controllers of each route.
 
