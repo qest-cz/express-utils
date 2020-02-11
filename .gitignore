@@ -1,7 +1,6 @@
 yarn-error.log
 node_modules
 .idea/*
-*d.ts
 dist
 .nyc_output
 coverage
