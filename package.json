@@ -1,6 +1,6 @@
 {
   "name": "@qest/express-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Base features and settings for express framework to projects",
   "scripts": {
     "prettier:run": "prettier --write \"src/**/*.ts\"",
