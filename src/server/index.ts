@@ -41,9 +41,8 @@ export const getDefaultUrlParser = (options: bodyParser.OptionsUrlencoded) =>
  * Creates a express app with reasonable defaults and middleware.
  * It is a simple wrapper around a provided router.
  *
- * For more info see the options interface.
+ * For more info see the options interface: {@link ExpressApp}
  *
- * @see ExpressApp
  */
 export const server = (options: ExpressApp) => {
     const config: ExpressApp = {

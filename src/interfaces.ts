@@ -41,23 +41,51 @@ export interface ExpressApp {
         /**
          * These are some middleware functions that are placed in specific places
          * in the middleware chain and their order cannot be altered.
-         * 
+         *
          * All of these have some sane default implementation provided
          *
          * If you wish to disable the default middleware, you can pass a `null` value to the appropriate property.
          */
         specificallyOrdered?: {
-            /** @default Handler Implementation with sane default values */
+            /** 
+             * Default Implementation with sane values
+             * 
+             * @default Handler 
+             **/
             rateLimiter?: Handler | null;
-            /** @default Handler Implementation utilizing the provided logger*/
+            /** 
+             * Default implementation utilizing the provided logger
+             * 
+             * @default Handler 
+             **/
             logRequest?: Handler | null;
-            /** @default Handler Generic implementation  */
+            /**
+             * Default generic implementation
+             * 
+             * Handler for normalization of unrecognized routes
+             *
+             * @default Handler
+             **/
             notFoundHandler?: Handler | null;
-            /** @default Handler Implementation utilizing the provided logger */
+            /**
+             * Default Implementation utilizing the provided logger
+             *
+             * @default ErrorRequestHandler
+             **/
             errorHandler?: ErrorRequestHandler | null;
-            /** @default Handler Standard implementation utilizing the `body-parser` library with sane defaults */
+            /**
+             * Default standard implementation utilizing the [body-parser](https://www.npmjs.com/package/body-parser)
+             * library with sane defaults
+             *
+             * @default Handler
+             **/
             bodyParser?: Handler | null;
-            /** @default Handler Standard implementation utilizing the `body-parser` library with sane defaults */
+            /**
+             * Default Standard implementation utilizing the [body-parser](https://www.npmjs.com/package/body-parser)
+             * library with sane defaults
+             *
+             * @default Handler
+             **/
             urlParser?: Handler | null;
         };
     };
