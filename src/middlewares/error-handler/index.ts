@@ -2,11 +2,16 @@ import { BaseError, IHttpError, InternalServerError, NotFoundError, Unprocessabl
 import { NextFunction, Response } from 'express';
 import { INTERNAL_SERVER_ERROR } from 'http-codes';
 import * as _ from 'lodash';
-import { IBasicAppRequest, IBasicUser, ILogger } from '../../interfaces';
+import { BasicAppRequest, BasicUser, Logger } from '../../interfaces';
 
 const NETWORK_CONNECT_TIMEOUT = 599;
 
-export const errorHandler = (logger: ILogger) => (error: any, req: IBasicAppRequest<IBasicUser>, res: Response, next: NextFunction) => {
+export const errorHandler = (logger: Logger) => (
+    error: any,
+    req: BasicAppRequest<BasicUser>,
+    res: Response,
+    next: NextFunction,
+) => {
     let err = error;
     try {
         if (err.isJoi) {
@@ -51,7 +56,7 @@ export const sendErrorResponse = (error: IHttpError, res: Response, next: NextFu
     next();
 };
 
-const createHandlerError = (err: BaseError<any>, req: IBasicAppRequest<IBasicUser>) => {
+const createHandlerError = (err: BaseError<any>, req: BasicAppRequest<BasicUser>) => {
     const e = <any>err;
     const { headers, query, user, body, path, cookies, ip, url, secure } = req;
     e.user = user;

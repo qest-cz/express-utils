@@ -4,9 +4,11 @@
     "module": "commonjs",
     "outDir": "dist",
     "sourceMap": true,
-    "removeComments": true,
+    "removeComments": false,
     "declaration": true,
     "moduleResolution": "node",
+    "strict": true,
+    "strictNullChecks": true,
     "typeRoots": [
       "node_modules/@types"
     ],

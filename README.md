@@ -1,22 +1,18 @@
 # Express utils
 
-Make our express applications normalized, use same error handling, requests logging, etc. Make same security settings and outputs for all aplications.
+The goal is to normalize our express based applications, use the same error handling, request logging, etc. Use the same security settings and outputs for all applications.
 
-Package include basic normalized express server with pre and post middlewares for each requests (like cors, rate limiter, body parsing, etc). 
-Package has simply error handler for each request witch correctly work with throwed HTTP errors from [@qest/error-utils](https://www.npmjs.com/package/@qest/error-utils) package. 
-Also log each error or request with [@qest/logger-utils](https://www.npmjs.com/package/@qest/logger-utils) package or custom logger.
+This package includes basic normalized express server with pre and post middlewares for each request (like cors, rate limiter, body parsing, etc). 
+Package includes a simple error handler for each request witch works well with HTTP errors from [@qest/error-utils](https://www.npmjs.com/package/@qest/error-utils) package. 
+It also logs each error or request with [@qest/logger-utils](https://www.npmjs.com/package/@qest/logger-utils) package or custom logger.
 
-## Instalation
-Install package to our dependencies from NPM.
-```
-yarn add @qest/express-utils
-```
-or
-```
-npm install @qest/express-utils
-```
+## Quickstart
 
-## What is in package
+1. `yarn add @qest/express-utils` or `npm install @qest/express-utils`
+2. 
+
+
+## What is in the package
 
 ### Server
 It make instance of express server with our routes and some default features.
