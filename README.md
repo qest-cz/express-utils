@@ -33,7 +33,7 @@ app.get("/hello-world", (req, res, next) => {
 const expressServer = server({
   logger: mySupperLogger,
   router: app,
-  // See the in-code interface documentation for more info about the default middleware added
+  // See the in-code interface documentation (or the generated MD docs referenced lower in readme) for more info about the default middleware added
   middleware: {
     preRequest: [corsSetup("*"), ...],
   },
@@ -47,7 +47,7 @@ expressServer
   .on("error", (e) => mySupperLogger.error(e));
 
 ```
-3. Or you can use some optional middleware provided by the package
+3. Or you can use some request handlers or optional middleware provided by the package
 ```typescript
 import express from "express";
 import { noContent, disallowRobots } from '@qest/express-utils'
