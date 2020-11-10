@@ -71,10 +71,6 @@
       "check-module",
       "check-type"
     ],
-    "interface-name": [
-      true,
-      "always-prefix"
-    ],
     "member-ordering": [
       true,
       {

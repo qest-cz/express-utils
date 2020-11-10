@@ -1,8 +1,12 @@
-import { NextFunction, Request, Response } from 'express';
+import { Handler } from 'express';
 import * as onFinished from 'on-finished';
-import { ILogger } from '../../interfaces';
+import { Logger } from '../../interfaces';
 
-export const logRequest = (logger: ILogger) => (req: Request, res: Response, next: NextFunction) => {
+export const logRequest = (logger: Logger): Handler => (
+    req,
+    res,
+    next,
+) => {
     const time = new Date();
 
     onFinished(req, () => {
