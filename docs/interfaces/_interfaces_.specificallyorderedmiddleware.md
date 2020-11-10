@@ -25,9 +25,9 @@
 
 • `Optional` **bodyParser**: Handler \| null
 
-*Defined in [src/interfaces.ts:86](https://github.com/qest-cz/express-utils/blob/b2be23b/src/interfaces.ts#L86)*
+*Defined in [src/interfaces.ts:92](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/interfaces.ts#L92)*
 
-Default standard implementation utilizing the [body-parser](https://www.npmjs.com/package/body-parser)
+[Default] Standard implementation utilizing the [body-parser](https://www.npmjs.com/package/body-parser)
 library with sane defaults
 
 **`default`** Handler
@@ -38,9 +38,9 @@ ___
 
 • `Optional` **errorHandler**: ErrorRequestHandler \| null
 
-*Defined in [src/interfaces.ts:79](https://github.com/qest-cz/express-utils/blob/b2be23b/src/interfaces.ts#L79)*
+*Defined in [src/interfaces.ts:85](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/interfaces.ts#L85)*
 
-Default Implementation utilizing the provided logger
+[Default] Implementation utilizing the provided logger
 
 **`default`** ErrorRequestHandler
 
@@ -50,9 +50,9 @@ ___
 
 • `Optional` **logRequest**: Handler \| null
 
-*Defined in [src/interfaces.ts:65](https://github.com/qest-cz/express-utils/blob/b2be23b/src/interfaces.ts#L65)*
+*Defined in [src/interfaces.ts:71](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/interfaces.ts#L71)*
 
-Default implementation utilizing the provided logger
+[Default] Implementation utilizing the provided logger
 
 **`default`** Handler
 
@@ -62,9 +62,9 @@ ___
 
 • `Optional` **notFoundHandler**: Handler \| null
 
-*Defined in [src/interfaces.ts:73](https://github.com/qest-cz/express-utils/blob/b2be23b/src/interfaces.ts#L73)*
+*Defined in [src/interfaces.ts:79](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/interfaces.ts#L79)*
 
-Default generic implementation
+[Default] Generic implementation
 
 Handler for normalization of unrecognized routes
 
@@ -76,9 +76,9 @@ ___
 
 • `Optional` **rateLimiter**: Handler \| null
 
-*Defined in [src/interfaces.ts:59](https://github.com/qest-cz/express-utils/blob/b2be23b/src/interfaces.ts#L59)*
+*Defined in [src/interfaces.ts:65](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/interfaces.ts#L65)*
 
-Default Implementation with sane values
+[Default] Implementation with sane values
 
 **`default`** Handler
 
@@ -88,9 +88,9 @@ ___
 
 • `Optional` **urlParser**: Handler \| null
 
-*Defined in [src/interfaces.ts:93](https://github.com/qest-cz/express-utils/blob/b2be23b/src/interfaces.ts#L93)*
+*Defined in [src/interfaces.ts:99](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/interfaces.ts#L99)*
 
-Default Standard implementation utilizing the [body-parser](https://www.npmjs.com/package/body-parser)
+[Default] Standard implementation utilizing the [body-parser](https://www.npmjs.com/package/body-parser)
 library with sane defaults
 
 **`default`** Handler

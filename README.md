@@ -21,14 +21,7 @@ import { mySuperLogger } from './my-supper-logger.ts'
 
 const app = express();
 
-app.get("/hello-world", (req, res, next) => {
-    try {
-        ...
-    } catch (err){
-        // It is important for the error handling to catch the error and send it to the nextFunction! Otherwise it will not work properly.
-        next(err)
-    }
-});
+app.get("/hello-world", ...);
 
 const expressServer = server({
   logger: mySupperLogger,

@@ -18,7 +18,7 @@
 
 ▸ `Const`**getDefaultJsonParser**(`options`: OptionsUrlencoded): NextHandleFunction
 
-*Defined in [src/server/index.ts:34](https://github.com/qest-cz/express-utils/blob/b2be23b/src/server/index.ts#L34)*
+*Defined in [src/server/index.ts:34](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/server/index.ts#L34)*
 
 #### Parameters:
 
@@ -34,7 +34,7 @@ ___
 
 ▸ `Const`**getDefaultUrlParser**(`options`: OptionsUrlencoded): NextHandleFunction
 
-*Defined in [src/server/index.ts:37](https://github.com/qest-cz/express-utils/blob/b2be23b/src/server/index.ts#L37)*
+*Defined in [src/server/index.ts:37](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/server/index.ts#L37)*
 
 #### Parameters:
 
@@ -50,7 +50,7 @@ ___
 
 ▸ `Const`**server**(`options`: [ExpressApp](../interfaces/_interfaces_.expressapp.md)): Express
 
-*Defined in [src/server/index.ts:47](https://github.com/qest-cz/express-utils/blob/b2be23b/src/server/index.ts#L47)*
+*Defined in [src/server/index.ts:47](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/server/index.ts#L47)*
 
 Creates a express app with reasonable defaults and middleware.
 It is a simple wrapper around a provided router.

@@ -27,22 +27,28 @@ export interface ExpressApp {
      */
     middleware: {
         /**
-         * This middleware will get executed in-order but other middleware might alter the request context beforehand
+         * [No Defaults]
+         * 
+         * This middleware will get executed in-order but other middleware might alter the request context beforehand.
          *
          * Will be executed before the request is handled by the provided router/app
          */
         preRequest?: Handler[];
         /**
-         * This middleware will get executed in-order but other middleware might alter the request context beforehand
+         * [No Defaults]
+         * 
+         * This middleware will get executed in-order but other middleware might alter the request context beforehand.
          *
          * Will be executed after the request is handled by the provided router/app
          */
         postRequest?: Handler[];
         /**
+         * [With Defaults]
+         * 
          * These are some middleware functions that are placed in specific places
          * in the middleware chain and their order cannot be altered.
          *
-         * All of these have some sane default implementation provided
+         * All of these have some sane default implementation provided.
          *
          * If you wish to disable the default middleware, you can pass a `null` value to the appropriate property.
          */
@@ -52,19 +58,19 @@ export interface ExpressApp {
 
 export interface SpecificallyOrderedMiddleware {
     /**
-     * Default Implementation with sane values
+     * [Default] Implementation with sane values
      *
      * @default Handler
      **/
     rateLimiter?: Handler | null;
     /**
-     * Default implementation utilizing the provided logger
+     * [Default] Implementation utilizing the provided logger
      *
      * @default Handler
      **/
     logRequest?: Handler | null;
     /**
-     * Default generic implementation
+     * [Default] Generic implementation
      *
      * Handler for normalization of unrecognized routes
      *
@@ -72,20 +78,20 @@ export interface SpecificallyOrderedMiddleware {
      **/
     notFoundHandler?: Handler | null;
     /**
-     * Default Implementation utilizing the provided logger
+     * [Default] Implementation utilizing the provided logger
      *
      * @default ErrorRequestHandler
      **/
     errorHandler?: ErrorRequestHandler | null;
     /**
-     * Default standard implementation utilizing the [body-parser](https://www.npmjs.com/package/body-parser)
+     * [Default] Standard implementation utilizing the [body-parser](https://www.npmjs.com/package/body-parser)
      * library with sane defaults
      *
      * @default Handler
      **/
     bodyParser?: Handler | null;
     /**
-     * Default Standard implementation utilizing the [body-parser](https://www.npmjs.com/package/body-parser)
+     * [Default] Standard implementation utilizing the [body-parser](https://www.npmjs.com/package/body-parser)
      * library with sane defaults
      *
      * @default Handler

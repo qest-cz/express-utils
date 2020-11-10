@@ -16,7 +16,7 @@
 
 ▸ `Const`**logRequest**(`logger`: [Logger](../interfaces/_interfaces_.logger.md)): Handler
 
-*Defined in [src/middleware/log-request/index.ts:5](https://github.com/qest-cz/express-utils/blob/b2be23b/src/middleware/log-request/index.ts#L5)*
+*Defined in [src/middleware/log-request/index.ts:5](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/middleware/log-request/index.ts#L5)*
 
 #### Parameters:
 

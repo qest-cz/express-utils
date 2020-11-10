@@ -16,7 +16,7 @@
 
 ▸ `Const`**notFoundHandler**(`req`: Request\<ParamsDictionary>, `res`: Response, `next`: NextFunction): void
 
-*Defined in [src/middleware/not-found-handler/index.ts:5](https://github.com/qest-cz/express-utils/blob/b2be23b/src/middleware/not-found-handler/index.ts#L5)*
+*Defined in [src/middleware/not-found-handler/index.ts:5](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/middleware/not-found-handler/index.ts#L5)*
 
 #### Parameters:
 

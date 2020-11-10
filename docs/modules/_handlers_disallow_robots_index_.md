@@ -16,7 +16,7 @@
 
 ▸ `Const`**disallowRobots**(`req`: express.Request, `res`: express.Response, `next`: express.NextFunction): void
 
-*Defined in src/handlers/disallow-robots/index.ts:3*
+*Defined in [src/handlers/disallow-robots/index.ts:3](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/handlers/disallow-robots/index.ts#L3)*
 
 #### Parameters:
 

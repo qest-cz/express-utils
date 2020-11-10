@@ -16,7 +16,7 @@
 
 ▸ `Const`**noContent**(`req`: express.Request, `res`: express.Response, `next`: express.NextFunction): void
 
-*Defined in src/handlers/no-content/index.ts:4*
+*Defined in [src/handlers/no-content/index.ts:4](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/handlers/no-content/index.ts#L4)*
 
 #### Parameters:
 

@@ -21,7 +21,7 @@
 
 •  **id**: any
 
-*Defined in [src/interfaces.ts:97](https://github.com/qest-cz/express-utils/blob/b2be23b/src/interfaces.ts#L97)*
+*Defined in [src/interfaces.ts:103](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/interfaces.ts#L103)*
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 • `Optional` **role**: undefined \| string
 
-*Defined in [src/interfaces.ts:98](https://github.com/qest-cz/express-utils/blob/b2be23b/src/interfaces.ts#L98)*
+*Defined in [src/interfaces.ts:104](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/interfaces.ts#L104)*

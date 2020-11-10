@@ -25,7 +25,7 @@
 
 •  **debug**: (msg: LoggerMsg, ...args: any[]) => void
 
-*Defined in [src/interfaces.ts:112](https://github.com/qest-cz/express-utils/blob/b2be23b/src/interfaces.ts#L112)*
+*Defined in [src/interfaces.ts:118](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/interfaces.ts#L118)*
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 •  **error**: (msg: LoggerMsg, ...args: any[]) => void
 
-*Defined in [src/interfaces.ts:109](https://github.com/qest-cz/express-utils/blob/b2be23b/src/interfaces.ts#L109)*
+*Defined in [src/interfaces.ts:115](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/interfaces.ts#L115)*
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 •  **fatal**: (msg: LoggerMsg, ...args: any[]) => void
 
-*Defined in [src/interfaces.ts:108](https://github.com/qest-cz/express-utils/blob/b2be23b/src/interfaces.ts#L108)*
+*Defined in [src/interfaces.ts:114](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/interfaces.ts#L114)*
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 •  **info**: (msg: LoggerMsg, ...args: any[]) => void
 
-*Defined in [src/interfaces.ts:111](https://github.com/qest-cz/express-utils/blob/b2be23b/src/interfaces.ts#L111)*
+*Defined in [src/interfaces.ts:117](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/interfaces.ts#L117)*
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 •  **trace**: (msg: LoggerMsg, ...args: any[]) => void
 
-*Defined in [src/interfaces.ts:113](https://github.com/qest-cz/express-utils/blob/b2be23b/src/interfaces.ts#L113)*
+*Defined in [src/interfaces.ts:119](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/interfaces.ts#L119)*
 
 ___
 
@@ -65,4 +65,4 @@ ___
 
 •  **warn**: (msg: LoggerMsg, ...args: any[]) => void
 
-*Defined in [src/interfaces.ts:110](https://github.com/qest-cz/express-utils/blob/b2be23b/src/interfaces.ts#L110)*
+*Defined in [src/interfaces.ts:116](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/interfaces.ts#L116)*

@@ -17,7 +17,7 @@
 
 ▸ `Const`**errorHandler**(`logger`: [Logger](../interfaces/_interfaces_.logger.md)): (Anonymous function)
 
-*Defined in [src/middleware/error-handler/index.ts:9](https://github.com/qest-cz/express-utils/blob/b2be23b/src/middleware/error-handler/index.ts#L9)*
+*Defined in [src/middleware/error-handler/index.ts:9](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/middleware/error-handler/index.ts#L9)*
 
 #### Parameters:
 
@@ -33,7 +33,7 @@ ___
 
 ▸ `Const`**sendErrorResponse**(`error`: IHttpError, `res`: Response, `next`: NextFunction): void
 
-*Defined in [src/middleware/error-handler/index.ts:50](https://github.com/qest-cz/express-utils/blob/b2be23b/src/middleware/error-handler/index.ts#L50)*
+*Defined in [src/middleware/error-handler/index.ts:50](https://github.com/qest-cz/express-utils/blob/4a9edb6/src/middleware/error-handler/index.ts#L50)*
 
 #### Parameters:
 
