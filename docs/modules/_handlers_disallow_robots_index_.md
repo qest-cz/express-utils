@@ -1,14 +1,14 @@
 **[@qest/express-utils](../README.md)**
 
-> [Globals](../README.md) / "simple-routes/disallow-robots/index"
+> [Globals](../README.md) / "handlers/disallow-robots/index"
 
-# Module: "simple-routes/disallow-robots/index"
+# Module: "handlers/disallow-robots/index"
 
 ## Index
 
 ### Functions
 
-* [disallowRobots](_simple_routes_disallow_robots_index_.md#disallowrobots)
+* [disallowRobots](_handlers_disallow_robots_index_.md#disallowrobots)
 
 ## Functions
 
@@ -16,7 +16,7 @@
 
 ▸ `Const`**disallowRobots**(`req`: express.Request, `res`: express.Response, `next`: express.NextFunction): void
 
-*Defined in [src/simple-routes/disallow-robots/index.ts:3](https://github.com/qest-cz/express-utils/blob/e9e3add/src/simple-routes/disallow-robots/index.ts#L3)*
+*Defined in src/handlers/disallow-robots/index.ts:3*
 
 #### Parameters:
 

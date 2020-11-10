@@ -16,7 +16,7 @@
 
 ▸ `Const`**serviceUnavailable**(`unavailable?`: boolean): Handler
 
-*Defined in [src/middleware/service-available/index.ts:4](https://github.com/qest-cz/express-utils/blob/e9e3add/src/middleware/service-available/index.ts#L4)*
+*Defined in [src/middleware/service-available/index.ts:4](https://github.com/qest-cz/express-utils/blob/b2be23b/src/middleware/service-available/index.ts#L4)*
 
 #### Parameters:
 

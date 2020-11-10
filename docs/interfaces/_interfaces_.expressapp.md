@@ -23,7 +23,7 @@
 
 •  **logger**: [Logger](_interfaces_.logger.md)
 
-*Defined in [src/interfaces.ts:24](https://github.com/qest-cz/express-utils/blob/e9e3add/src/interfaces.ts#L24)*
+*Defined in [src/interfaces.ts:24](https://github.com/qest-cz/express-utils/blob/b2be23b/src/interfaces.ts#L24)*
 
 Any interface compatible logger.
 A recommended option is to use the [@qest/logger-utils](https://www.npmjs.com/package/@qest/logger-utils)
@@ -36,7 +36,7 @@ ___
 
 •  **middleware**: { postRequest?: Handler[] ; preRequest?: Handler[] ; specificallyOrdered?: [SpecificallyOrderedMiddleware](_interfaces_.specificallyorderedmiddleware.md)  }
 
-*Defined in [src/interfaces.ts:28](https://github.com/qest-cz/express-utils/blob/e9e3add/src/interfaces.ts#L28)*
+*Defined in [src/interfaces.ts:28](https://github.com/qest-cz/express-utils/blob/b2be23b/src/interfaces.ts#L28)*
 
 See the documentation for each field
 
@@ -54,7 +54,7 @@ ___
 
 •  **router**: Router
 
-*Defined in [src/interfaces.ts:17](https://github.com/qest-cz/express-utils/blob/e9e3add/src/interfaces.ts#L17)*
+*Defined in [src/interfaces.ts:17](https://github.com/qest-cz/express-utils/blob/b2be23b/src/interfaces.ts#L17)*
 
 Any express router or app that will be mounted on the root path `/` of the web server.
 
@@ -66,7 +66,7 @@ ___
 
 • `Optional` **useSentryMiddleware**: undefined \| false \| true
 
-*Defined in [src/interfaces.ts:11](https://github.com/qest-cz/express-utils/blob/e9e3add/src/interfaces.ts#L11)*
+*Defined in [src/interfaces.ts:11](https://github.com/qest-cz/express-utils/blob/b2be23b/src/interfaces.ts#L11)*
 
 Adds the Sentry `requestHandler` and `errorHandler` to the express middleware stack
 

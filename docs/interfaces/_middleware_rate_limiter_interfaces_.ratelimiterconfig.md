@@ -22,7 +22,7 @@
 
 •  **enabled**: boolean
 
-*Defined in [src/middleware/rate-limiter/interfaces.ts:4](https://github.com/qest-cz/express-utils/blob/e9e3add/src/middleware/rate-limiter/interfaces.ts#L4)*
+*Defined in [src/middleware/rate-limiter/interfaces.ts:4](https://github.com/qest-cz/express-utils/blob/b2be23b/src/middleware/rate-limiter/interfaces.ts#L4)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 •  **max**: number
 
-*Defined in [src/middleware/rate-limiter/interfaces.ts:3](https://github.com/qest-cz/express-utils/blob/e9e3add/src/middleware/rate-limiter/interfaces.ts#L3)*
+*Defined in [src/middleware/rate-limiter/interfaces.ts:3](https://github.com/qest-cz/express-utils/blob/b2be23b/src/middleware/rate-limiter/interfaces.ts#L3)*
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 •  **windowMs**: number
 
-*Defined in [src/middleware/rate-limiter/interfaces.ts:2](https://github.com/qest-cz/express-utils/blob/e9e3add/src/middleware/rate-limiter/interfaces.ts#L2)*
+*Defined in [src/middleware/rate-limiter/interfaces.ts:2](https://github.com/qest-cz/express-utils/blob/b2be23b/src/middleware/rate-limiter/interfaces.ts#L2)*

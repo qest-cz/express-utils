@@ -16,7 +16,7 @@
 
 ▸ `Const`**corsSetup**(`originHeader`: string): Handler
 
-*Defined in [src/middleware/cors-setup/index.ts:3](https://github.com/qest-cz/express-utils/blob/e9e3add/src/middleware/cors-setup/index.ts#L3)*
+*Defined in [src/middleware/cors-setup/index.ts:3](https://github.com/qest-cz/express-utils/blob/b2be23b/src/middleware/cors-setup/index.ts#L3)*
 
 #### Parameters:
 

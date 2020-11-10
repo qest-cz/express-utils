@@ -1,4 +1,4 @@
 export * from './server';
 export * from './middleware';
-export * from './simple-routes';
+export * from './handlers';
 export * from './interfaces';

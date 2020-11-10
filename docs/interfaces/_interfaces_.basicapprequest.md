@@ -614,7 +614,7 @@ ___
 
 • `Optional` **user**: T
 
-*Defined in [src/interfaces.ts:102](https://github.com/qest-cz/express-utils/blob/e9e3add/src/interfaces.ts#L102)*
+*Defined in [src/interfaces.ts:102](https://github.com/qest-cz/express-utils/blob/b2be23b/src/interfaces.ts#L102)*
 
 ___
 

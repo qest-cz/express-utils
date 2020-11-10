@@ -66,7 +66,7 @@ ___
 
 ### disallowRobots
 
-Re-exports: [disallowRobots](_simple_routes_disallow_robots_index_.md#disallowrobots)
+Re-exports: [disallowRobots](_handlers_disallow_robots_index_.md#disallowrobots)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 ### noContent
 
-Re-exports: [noContent](_simple_routes_no_content_index_.md#nocontent)
+Re-exports: [noContent](_handlers_no_content_index_.md#nocontent)
 
 ___
 

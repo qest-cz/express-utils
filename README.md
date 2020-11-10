@@ -93,4 +93,4 @@ The library also provides some handler functions that are not added by the serve
 
 Refer to step 3. of the [quickstart section](#quickstart)
 
-For more information about the available handlers see the [index file](./docs/modules/_simple_routes_index_.md)
+For more information about the available handlers see the [index file](./docs/modules/_handlers_index_.md)

@@ -16,7 +16,7 @@
 
 ▸ `Const`**rateLimiter**(`settings?`: [RateLimiterConfig](../interfaces/_middleware_rate_limiter_interfaces_.ratelimiterconfig.md)): Handler
 
-*Defined in [src/middleware/rate-limiter/index.ts:5](https://github.com/qest-cz/express-utils/blob/e9e3add/src/middleware/rate-limiter/index.ts#L5)*
+*Defined in [src/middleware/rate-limiter/index.ts:5](https://github.com/qest-cz/express-utils/blob/b2be23b/src/middleware/rate-limiter/index.ts#L5)*
 
 #### Parameters:
 
