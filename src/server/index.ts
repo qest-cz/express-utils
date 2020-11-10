@@ -7,7 +7,7 @@ import {
     logRequest,
     notFoundHandler,
     rateLimiter,
-} from '../middlewares';
+} from '../middleware';
 import { ExpressApp, Logger } from './../interfaces';
 
 type MiddlewareDef =

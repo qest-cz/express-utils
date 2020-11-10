@@ -6,6 +6,10 @@ This package includes basic normalized express server with pre and post middlewa
 Package includes a simple error handler for each request which works well with the HTTP errors from [@qest/error-utils](https://www.npmjs.com/package/@qest/error-utils) package. 
 It also logs each error or request with [@qest/logger-utils](https://www.npmjs.com/package/@qest/logger-utils) package or custom logger.
 
+## Docs
+
+All docs except Readme should be pulled from the code typedoc, so you can use that as a reference.
+
 ## Quickstart
 
 1. `yarn add @qest/express-utils` or `npm install @qest/express-utils`
@@ -29,6 +33,7 @@ app.get("/hello-world", (req, res, next) => {
 const expressServer = server({
   logger: mySupperLogger,
   router: app,
+  // See the in-code interface documentation for more info about the default middleware added
   middleware: {
     preRequest: [corsSetup("*"), ...],
   },
@@ -42,24 +47,50 @@ expressServer
   .on("error", (e) => mySupperLogger.error(e));
 
 ```
+3. Or you can use some optional middleware provided by the package
+```typescript
+import express from "express";
+import { noContent, disallowRobots } from '@qest/express-utils'
+
+const app = express();
+
+// You can use provided utility handlers for favicon and robots
+app.get('/favicon.ico', noContent)
+app.get('/robots.txt', disallowRobots) 
+
+app.get("/hello-world", ...);
+
+const port = 8080
+app
+  .listen(port, () => {
+    mySupperLogger.info(`[Express] Listening at ${port}`);
+  })
+  .on("error", (e) => mySupperLogger.error(e));
+```
 
 ## What is included
 
 ### Server wrapper
 
-The package contains a simple server wrapper that will provide some sane defaults and middleware
+The package contains a simple server wrapper that will provide some sane defaults and middleware.
 
-#### Options parameters
+Refer to step 2. of the [quickstart section](#quickstart)
 
-For more info about the available options **see the in-code "ExpressApp" interface documentation**
+For more information see the [server function documentation](./docs/modules/_server_index_.md#server)
 
-// TODO Add a reference to generated tsdoc?
+#### Option parameters
+
+For information about the available options see the [ExpressApp interface documentation](./docs/interfaces/_interfaces_.expressapp.md)
 
 #### Middleware added by default
 
-For more info about the each middleware **see the in-code "ExpressApp" interface documentation**
-
-// TODO Add a reference to generated tsdoc?
+For information about the added middleware see the [ExpressApp interface documentation](./docs/interfaces/_interfaces_.expressapp.md). The default middleware should be reflected in the ExpressApp interface properties.
 
 
-// TODO info about other bundled libs like getRobots and etc...
+### Optional middleware and handlers
+
+The library also provides some handler functions that are not added by the server wrapper and you can use them separately if you wish. 
+
+Refer to step 3. of the [quickstart section](#quickstart)
+
+For more information about the available handlers see the [index file](./docs/modules/_simple_routes_index_.md)

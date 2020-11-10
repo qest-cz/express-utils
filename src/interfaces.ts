@@ -46,49 +46,51 @@ export interface ExpressApp {
          *
          * If you wish to disable the default middleware, you can pass a `null` value to the appropriate property.
          */
-        specificallyOrdered?: {
-            /** 
-             * Default Implementation with sane values
-             * 
-             * @default Handler 
-             **/
-            rateLimiter?: Handler | null;
-            /** 
-             * Default implementation utilizing the provided logger
-             * 
-             * @default Handler 
-             **/
-            logRequest?: Handler | null;
-            /**
-             * Default generic implementation
-             * 
-             * Handler for normalization of unrecognized routes
-             *
-             * @default Handler
-             **/
-            notFoundHandler?: Handler | null;
-            /**
-             * Default Implementation utilizing the provided logger
-             *
-             * @default ErrorRequestHandler
-             **/
-            errorHandler?: ErrorRequestHandler | null;
-            /**
-             * Default standard implementation utilizing the [body-parser](https://www.npmjs.com/package/body-parser)
-             * library with sane defaults
-             *
-             * @default Handler
-             **/
-            bodyParser?: Handler | null;
-            /**
-             * Default Standard implementation utilizing the [body-parser](https://www.npmjs.com/package/body-parser)
-             * library with sane defaults
-             *
-             * @default Handler
-             **/
-            urlParser?: Handler | null;
-        };
+        specificallyOrdered?: SpecificallyOrderedMiddleware;
     };
+}
+
+export interface SpecificallyOrderedMiddleware {
+    /**
+     * Default Implementation with sane values
+     *
+     * @default Handler
+     **/
+    rateLimiter?: Handler | null;
+    /**
+     * Default implementation utilizing the provided logger
+     *
+     * @default Handler
+     **/
+    logRequest?: Handler | null;
+    /**
+     * Default generic implementation
+     *
+     * Handler for normalization of unrecognized routes
+     *
+     * @default Handler
+     **/
+    notFoundHandler?: Handler | null;
+    /**
+     * Default Implementation utilizing the provided logger
+     *
+     * @default ErrorRequestHandler
+     **/
+    errorHandler?: ErrorRequestHandler | null;
+    /**
+     * Default standard implementation utilizing the [body-parser](https://www.npmjs.com/package/body-parser)
+     * library with sane defaults
+     *
+     * @default Handler
+     **/
+    bodyParser?: Handler | null;
+    /**
+     * Default Standard implementation utilizing the [body-parser](https://www.npmjs.com/package/body-parser)
+     * library with sane defaults
+     *
+     * @default Handler
+     **/
+    urlParser?: Handler | null;
 }
 
 export interface BasicUser {

@@ -1,0 +1,10 @@
+{
+    "mode": "modules",
+    "out": "docs",
+    "inputFiles": ["./src"],
+    "excludeNotExported": true,
+    "excludePrivate": true,
+    "excludeProtected": true,
+    "readme": "none",
+    "plugin": "typedoc-plugin-markdown"
+}
